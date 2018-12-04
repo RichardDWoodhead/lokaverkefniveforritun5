@@ -31,7 +31,7 @@
     </form>
 
     @foreach($projects as $project)
-        @if(has_tags($project,$query,$project_tags))
+        @if(has_tags($project,$query,$project_tags) || sizeof($query) == 0)
             <div class="card">
                 <a style="text-decoration: none;color:black;" href="{{$project->path()}}">
                     <div class="card-body">
